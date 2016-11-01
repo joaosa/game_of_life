@@ -11,7 +11,7 @@ defmodule GameOfLifeTest do
       ]
     end
 
-    test "should read no player if no plays" do
+    test "should read no player" do
       assert GameOfLife.get_player == nil
     end
 
