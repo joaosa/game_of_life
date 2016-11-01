@@ -12,7 +12,7 @@ defmodule GameOfLifeTest do
 
   describe "GameOfLife.get_player" do
     test "should read no player" do
-      assert GameOfLife.get_player == nil
+      refute GameOfLife.get_player
     end
 
     test "should read player w", context do
