@@ -35,8 +35,8 @@ defmodule GameOfLifeTest do
 
     test "should have the right height", context do
       grid = GameOfLife.get_grid(context[:player_w])
-      grid_size = Map.size grid
-      assert grid_size == 29
+      grid_height = Map.size grid
+      assert grid_height == 29
     end
   end
 end
