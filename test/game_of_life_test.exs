@@ -2,15 +2,15 @@ defmodule GameOfLifeTest do
   use ExUnit.Case, async: true
   doctest GameOfLife
 
-  describe "GameOfLife.get_player" do
-    setup context do
-      plays = File.read!("test/fixtures/play.txt")
-      [
-        player_w: plays,
-        player_b: Regex.replace(~r/^.*\n/, plays, "b\n")
-      ]
-    end
+  setup_all context do
+    plays = File.read!("test/fixtures/play.txt")
+    [
+      player_w: plays,
+      player_b: Regex.replace(~r/^.*\n/, plays, "b\n")
+    ]
+  end
 
+  describe "GameOfLife.get_player" do
     test "should read no player" do
       assert GameOfLife.get_player == nil
     end
