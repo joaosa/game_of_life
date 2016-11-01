@@ -22,7 +22,9 @@ defmodule GameOfLifeTest do
     test "should read player b", context do
       assert GameOfLife.get_player(context[:player_b]) == :b
     end
+  end
 
+  describe "GameOfLife.get_grid" do
     test "should not read a grid" do
       refute GameOfLife.get_grid
     end
