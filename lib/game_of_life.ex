@@ -12,6 +12,12 @@ defmodule GameOfLife do
     nil
   end
   def get_grid(plays) do
-    %{}
+    [_|lines] = String.split plays, "\n", trim: true
+    grid_lines = lines |> Enum.with_index
+    for {line,index} <- grid_lines, into: %{} do
+      key = index
+      val = String.split line, ""
+      {key, val}
+    end
   end
 end
