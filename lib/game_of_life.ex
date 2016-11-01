@@ -3,6 +3,8 @@ defmodule GameOfLife do
     nil
   end
   def get_player(plays) do
-    :w
+    [head|tail] = String.split plays, "\n"
+    [player|rest] = String.split head, ""
+    String.to_atom(player)
   end
 end
