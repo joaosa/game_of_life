@@ -4,8 +4,8 @@ defmodule GameOfLife do
   end
 
   def get_player(plays) do
-    [head|tail] = String.split plays, "\n"
-    [player|rest] = String.split head, ""
+    [head|_] = String.split plays, "\n"
+    [player|_] = String.split head, ""
     String.to_atom(player)
   end
 end
