@@ -11,4 +11,7 @@ defmodule GameOfLife do
   def get_grid do
     nil
   end
+  def get_grid(plays) do
+    %{}
+  end
 end
