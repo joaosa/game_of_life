@@ -48,4 +48,10 @@ defmodule GameOfLifeTest do
       assert grid_width == 29
     end
   end
+
+  describe "GameOfLife.get_neighbors" do
+    test "should not get any neighbors", context do
+      refute GameOfLife.get_neighbors(context[:player_w], {0,0})
+    end
+  end
 end
