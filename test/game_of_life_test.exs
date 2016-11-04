@@ -54,7 +54,7 @@ defmodule GameOfLifeTest do
   end
 
   describe "GameOfLife.get_neighbors" do
-    test "should not get any neighbors", context do
+    test "should not get any neighbors" do
       refute GameOfLife.get_neighbors
     end
   end
