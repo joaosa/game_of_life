@@ -29,6 +29,10 @@ defmodule GameOfLifeTest do
       refute GameOfLife.get_grid
     end
 
+    test "should read an empty grid" do
+      assert is_map(GameOfLife.get_grid(""))
+    end
+
     test "should read a grid", context do
       assert is_map(GameOfLife.get_grid(context[:player_w]))
     end
