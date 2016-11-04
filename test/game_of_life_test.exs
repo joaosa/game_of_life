@@ -38,5 +38,14 @@ defmodule GameOfLifeTest do
       grid_height = Map.size grid
       assert grid_height == 29
     end
+
+    test "should have the right width", context do
+      grid = GameOfLife.get_grid(context[:player_w])
+      grid_width = grid
+                   |> (&Enum.map(&1, fn({k,v}) -> Map.size v end)).()
+                   |> (&Enum.sum(&1) / length(&1)).()
+                   |> round
+      assert grid_width == 29
+    end
   end
 end
