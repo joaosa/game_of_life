@@ -51,7 +51,7 @@ defmodule GameOfLifeTest do
 
   describe "GameOfLife.get_neighbors" do
     test "should not get any neighbors", context do
-      refute GameOfLife.get_neighbors(context[:player_w], {0,0})
+      refute GameOfLife.get_neighbors
     end
   end
 end
