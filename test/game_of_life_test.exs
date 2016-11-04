@@ -57,5 +57,9 @@ defmodule GameOfLifeTest do
     test "should not get any neighbors" do
       refute GameOfLife.get_neighbors
     end
+
+    test "should read an empty set of neighbors" do
+      assert isList(GameOfLife.get_neighbors(""))
+    end
   end
 end
