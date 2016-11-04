@@ -11,6 +11,9 @@ defmodule GameOfLife do
   def get_grid do
     nil
   end
+  def get_grid("") do
+    %{}
+  end
   def get_grid(plays) do
     [_|lines] = String.split plays, "\n", trim: true
     numbered_lines = lines |> Enum.with_index
