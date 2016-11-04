@@ -2,7 +2,7 @@ defmodule GameOfLifeTest do
   use ExUnit.Case, async: true
   doctest GameOfLife
 
-  setup_all context do
+  setup_all do
     plays = File.read!("test/fixtures/play.txt")
     [
       player_w: plays,
