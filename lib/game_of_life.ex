@@ -32,4 +32,7 @@ defmodule GameOfLife do
   def get_neighbors do
     nil
   end
+  def get_neighbors("") do
+    []
+  end
 end
