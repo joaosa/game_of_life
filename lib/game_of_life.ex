@@ -25,4 +25,8 @@ defmodule GameOfLife do
       {line_index, grid_cols}
     end
   end
+
+  def get_neighbors do
+    nil
+  end
 end
